@@ -1,14 +1,20 @@
+import os
+
+print(f"cuurent folder:", os.getcwd())
+
 import pandas as pd
 from datetime import datetime
-import os
+
+
 from openpyxl.styles import Font, Alignment, Border, Side
 
 
-#read the excel , sheet_name = 0 means that read first sheet alone:
-df = pd.read_excel("HWM_Quote_file.xlsx", sheet_name=0, engine="openpyxl")
 
-#by using os create the output folder
-os.makedirs("Output", exist_ok=True)
+#read the excel , sheet_name = 0 means that read first sheet alone:
+df = pd.read_excel("Input/HWM_Quote_file.xlsx", sheet_name=0, engine="openpyxl")
+
+# #by using os create the output folder
+# os.makedirs("Output", exist_ok=True)
 
 
 
